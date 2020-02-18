@@ -11,7 +11,7 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
 	<http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
 	<db:mysql-config name="MySQL_Configuration" doc:name="MySQL Configuration" database="training" host="mudb.mulesoft-training.com" password="mule" port="3306" user="mule"/>
 	<flow name="frist-jenkinsFlow">
-		<http:listener config-ref="HTTP_Listener_Configuration" path="/GET" doc:name="HTTP"/>
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/frist" doc:name="HTTP" allowedMethods="GET"/>
 		<db:select config-ref="MySQL_Configuration" doc:name="Database">
 			<db:parameterized-query><![CDATA[SELECT * from american]]></db:parameterized-query>
 		</db:select>
