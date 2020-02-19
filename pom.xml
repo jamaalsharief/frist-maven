@@ -17,12 +17,13 @@
     		<username>jamalsharief</username>
 			<password>Supercool@0</password>
 				<applicationName>frist-jenkins</applicationName>
-				<environment>DEV</environment>
+				<environment>PROD</environment>
 			<business.group>LnD</business.group>
 	</properties>
 
 	<build>
-		<plugins><plugin>
+		<plugins>
+		<plugin>
 <groupId>org.mule.tools.maven</groupId>
 <artifactId>mule-maven-plugin</artifactId>
 <version>2.3.2</version>
@@ -48,15 +49,6 @@
 </execution>
 </executions>
 </plugin>
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-app-maven-plugin</artifactId>
-				<version>${mule.tools.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-                    <copyToAppsDirectory>true</copyToAppsDirectory>
-				</configuration>
-			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
